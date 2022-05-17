@@ -8,36 +8,36 @@ public class RaindropsTest {
   @Test
   public void factorOfThree() {
     Raindrops raindrops = new Raindrops();
-    int result = raindrops.plingPlangPlong( 3 );
+    String result = raindrops.plingPlangPlong( 3 );
     assertEquals( "Pling", result );
   }
 
   @Test
   public void factorOfFive() {
     Raindrops raindrops = new Raindrops();
-    int result = raindrops.plingPlangPlong( 5 );
+    String result = raindrops.plingPlangPlong( 5 );
     assertEquals( "Plang", result );
   }
 
   @Test
   public void factorOfThreeAndFive() {
     Raindrops raindrops = new Raindrops();
-    int result = raindrops.plingPlangPlong( 30 );
+    String result = raindrops.plingPlangPlong( 30 );
     assertEquals( "PlingPlang", result );
   }
 
   @Test
   public void factorOfSeven() {
     Raindrops raindrops = new Raindrops();
-    int result = raindrops.plingPlangPlong( 7 );
+    String result = raindrops.plingPlangPlong( 7 );
     assertEquals( "Plong", result );
   }
 
   @Test
   public void factorOfNone() {
     Raindrops raindrops = new Raindrops();
-    int result = raindrops.plingPlangPlong( 16 );
-    assertEquals( 16, result );
+    String result = raindrops.plingPlangPlong( 16 );
+    assertEquals( "16", result );
   }
 
 

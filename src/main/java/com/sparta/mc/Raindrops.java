@@ -1,19 +1,24 @@
 package com.sparta.mc;
 
 public class Raindrops {
-  public int plingPlangPlong( int n ) {
+  public String plingPlangPlong( int n ) {
 
-    if ( n % 3 == 0 && n % 5 == 0 ) {
-      System.out.println("PlingPlang");
-    } else if ( n % 3 == 0 ) {
-      System.out.println("Pling");
-    } else if ( n % 5 == 0 ) {
-      System.out.println("Plang");
-    } else if ( n % 7 == 0 ) {
-      System.out.println("Plong");
-    } else {
-      System.out.println(n);
+    String result = "";
+
+    if ( n % 3 != 0 && n % 5 != 0 && n % 7 != 0) {
+      return String.valueOf( n );
+    } else{
+      if(n % 3 == 0 && n % 5 == 0){
+        result = "PlingPlang";
+      } if(n % 3 == 0){
+        result = "Pling";
+      } if(n % 5 == 0){
+        result = "Plang";
+      } if(n % 7 == 0){
+        result = "Plong";
+      }
+      return result;
     }
-    return n;
+
   }
 }
