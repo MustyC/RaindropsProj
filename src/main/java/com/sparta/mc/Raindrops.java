@@ -10,15 +10,16 @@ public class Raindrops {
     } else{
       if(n % 3 == 0 && n % 5 == 0){
         result = "PlingPlang";
-      } if(n % 3 == 0){
+      } else if(n % 5 == 0 && n % 7 == 0){
+        result = "PlangPlong";
+      } else if(n % 3 == 0){
         result = "Pling";
-      } if(n % 5 == 0){
+      } else if(n % 5 == 0){
         result = "Plang";
-      } if(n % 7 == 0){
+      } else if(n % 7 == 0){
         result = "Plong";
       }
       return result;
     }
-
   }
 }
