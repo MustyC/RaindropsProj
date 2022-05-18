@@ -22,11 +22,9 @@ I added mutation test coverage which produces an index.html file when you run th
 
 This creates a webpage that displays the programs test coverage report, the latest of which can be viewed below
 
-  ![](https://imgur.com/49QtT6W)
+  ![](MutationCoverageTest.png)
 
 
 
-
-
-Here is further information regarding mutation testing if you would like to learn more about it "[https://pitest.org/](https://pitest.org/)"
+Here is further information regarding this on the maven docs "[https://pitest.org/](https://pitest.org/)"
 
