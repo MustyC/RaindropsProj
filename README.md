@@ -9,7 +9,7 @@ This is a function that takes an integer as its input and converts it to a strin
 - If the input has a factor of **7**, the returned string will be 'Plong'
 - If the input does not have a factor of **3**, **5** or **7**, it will simply return the value of the digits.
 
-## Examples -
+## Examples - 
 
 - 28's factors are 1, 2, 4, **7**, 14 and 28: this would return a simple 'Plong'
 - 30's factors are 1, 2, **3**, **5**, 6, 10, 15, 30: this would return a 'PlingPlang'
