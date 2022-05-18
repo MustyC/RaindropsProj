@@ -5,21 +5,20 @@ public class Raindrops {
 
     String result = "";
 
-    if ( n % 3 != 0 && n % 5 != 0 && n % 7 != 0) {
+    if ( n % 3 != 0 && n % 5 != 0 && n % 7 != 0 ) {
       return String.valueOf( n );
-    } else{
-      if(n % 3 == 0 && n % 5 == 0){
-        result = "PlingPlang";
-      } else if(n % 5 == 0 && n % 7 == 0){
-        result = "PlangPlong";
-      } else if(n % 3 == 0){
-        result = "Pling";
-      } else if(n % 5 == 0){
-        result = "Plang";
-      } else if(n % 7 == 0){
-        result = "Plong";
-      }
-      return result;
     }
+
+    if ( n % 3 == 0 ) {
+      result += "Pling";
+    }
+    if ( n % 5 == 0 ) {
+      result += "Plang";
+    }
+    if ( n % 7 == 0 ) {
+      result += "Plong";
+    }
+    return result;
   }
 }
+
