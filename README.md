@@ -21,6 +21,7 @@ I added mutation test coverage which produces an index.html file when you run th
 'mvn test-compile org.pitest:pitest-maven:mutationCoverage'
 
 This creates a webpage that displays the programs test coverage report, the latest of which can be viewed below
+<img width="385" alt="MutationCoverageTest" src="https://user-images.githubusercontent.com/80487618/169091061-4a214d1b-b182-4ea8-bf50-ece117df5f8c.png">
 
 As you can see, my tests cover almost the whole project, the reason it is not 100% is due to the usage of a static method. 
 This thorough testing ensures rigidity in the code. 
