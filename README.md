@@ -20,10 +20,10 @@ This is a function that takes an integer as its input and converts it to a strin
 I added mutation test coverage which produces an index.html file when you run the following command
 'mvn test-compile org.pitest:pitest-maven:mutationCoverage'
 
-This creates a webpage that displays the programs test coverage report, the latest of which can be viewed below
+This creates a webpage that displays the programs test coverage report, the latest of which can be viewed below.
 
 <img width="385" alt="MutationCoverageTest" src="https://user-images.githubusercontent.com/80487618/169087818-8220a78e-9364-4ee4-9642-f683924671be.png">
-
+As you can see, my tests cover almost the whole project, the reason it is not 100% coverage is due to the fact that it uses a static method.
 
 Here is further information regarding this on the maven docs "[https://pitest.org/](https://pitest.org/)"
 
