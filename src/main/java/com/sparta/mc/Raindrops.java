@@ -1,7 +1,7 @@
 package com.sparta.mc;
 
 public class Raindrops {
-  public String plingPlangPlong( int n ) {
+  public static String plingPlangPlong( int n ) {
 
     String result = "";
 
