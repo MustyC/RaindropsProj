@@ -12,7 +12,6 @@ public class RaindropsTest {
   @ValueSource( ints = { 3, 6, 9, 12, 18 } )
   @DisplayName( "Test for only factors of three" )
   void factorOfThree( int three ) {
-
     String result = Raindrops.plingPlangPlong( three );
     assertEquals( "Pling", result );
   }
@@ -26,6 +25,14 @@ public class RaindropsTest {
   }
 
   @ParameterizedTest
+  @ValueSource( ints = { 7, 14, 28, 49, 56 } )
+  @DisplayName( "Test for only factors of seven" )
+  void factorOfSeven( int seven ) {
+    String result = Raindrops.plingPlangPlong( seven );
+    assertEquals( "Plong", result );
+  }
+
+  @ParameterizedTest
   @ValueSource( ints = { 15, 30, 45, 60, 75 } )
   @DisplayName( "Test for factor of three and five" )
   public void factorOfThreeAndFive( int threeAndFive ) {
@@ -33,13 +40,6 @@ public class RaindropsTest {
     assertEquals( "PlingPlang", result );
   }
 
-  @ParameterizedTest
-  @ValueSource( ints = { 7, 14, 28, 49, 56 } )
-  @DisplayName( "Test for only factors of seven" )
-  void factorOfSeven( int seven ) {
-    String result = Raindrops.plingPlangPlong( seven );
-    assertEquals( "Plong", result );
-  }
   @ParameterizedTest
   @ValueSource( ints = { 21, 42, 63, 84, 126 } )
   @DisplayName( "Test for factors of three and seven" )
@@ -58,11 +58,11 @@ public class RaindropsTest {
 
 
   @ParameterizedTest
-  @ValueSource( ints = { 4, 8, 17, 23, 38 } )
-  @DisplayName( "Test for numbers that are not a factor of three, five or seven" )
-  void factorOfNone( int none ) {
-    String result = Raindrops.plingPlangPlong( none );
-    assertEquals( String.valueOf( none ), result );
+  @ValueSource( ints = { 105, 210, 420, 840 } )
+  @DisplayName( "Test for numbers that are a factor of three, five and seven" )
+  void factorOfAllTest( int all ) {
+    String result = Raindrops.plingPlangPlong( all );
+    assertEquals( "PlingPlangPlong", result );
   }
 
   @ParameterizedTest
@@ -72,6 +72,7 @@ public class RaindropsTest {
     String result = Raindrops.plingPlangPlong( negative );
     assertEquals( "Pling", result );
   }
+
   @ParameterizedTest
   @ValueSource( ints = { -5, -10, -20, -25 } )
   @DisplayName( "Test for negative numbers that are a factor of five" )
@@ -80,19 +81,28 @@ public class RaindropsTest {
     assertEquals( "Plang", result );
   }
 
-  @Test
-  @DisplayName( "Test for large number" )
-  void largeNumberTest() {
-    String result = Raindrops.plingPlangPlong( 30000000 );
+  @ParameterizedTest
+  @ValueSource( ints = { -7, -14, -28, -49, -56 } )
+  @DisplayName( "Test for negative numbers that are a factor of seven" )
+  void negativeNumberTestOfSeven( int negative ) {
+    String result = Raindrops.plingPlangPlong( negative );
+    assertEquals( "Plong", result );
+  }
+
+  @ParameterizedTest
+  @ValueSource( ints = { 300000000, 900000000, 600000000, 999999990, 1200000000 } )
+  @DisplayName( "Test for large numbers" )
+  void largeNumberTest( int large ) {
+    String result = Raindrops.plingPlangPlong( large );
     assertEquals( "PlingPlang", result );
   }
 
   @ParameterizedTest
-  @ValueSource( ints = { 105, 210, 420, 840 } )
-  @DisplayName( "Test for numbers that are a factor of three, five and seven" )
-  void factorOfAllTest( int all ) {
-    String result = Raindrops.plingPlangPlong( all );
-    assertEquals( "PlingPlangPlong", result );
+  @ValueSource( ints = { 4, 8, 17, 23, 38 } )
+  @DisplayName( "Test for numbers that are not a factor of three, five or seven" )
+  void factorOfNone( int none ) {
+    String result = Raindrops.plingPlangPlong( none );
+    assertEquals( String.valueOf( none ), result );
   }
 
 
